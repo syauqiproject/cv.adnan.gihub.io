@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV IT Support - Adenan Muhtadin</title>
+    <!-- Link ke Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset CSS dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container Utama CV */
+        .container {
+            display: flex;
+            background-color: #fff;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 600px;
+        }
+
+        /* BAGIAN KIRI (Sidebar) */
+        .left-side {
+            background-color: #444; /* Warna abu-abu gelap seperti template */
+            color: white;
+            width: 35%;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            background-color: #666;
+            border-radius: 50%; /* Bulat, ganti ke 0 jika ingin kotak */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #fff;
+            overflow: hidden;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .section-title-left {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+            width: 100%;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item a:hover {
+            color: #25D366; /* warna WhatsApp */
+        }
+        
+
+        /* BAGIAN KANAN (Konten Utama) */
+        .right-side {
+            width: 65%;
+            padding: 40px 30px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        header .subtitle {
+            color: #777;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        header .about-me {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+            border-left: 4px solid #444;
+            padding-left: 15px;
+        }
+
+        /* Section Umum */
+        section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #333;
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Pendidikan */
+        .education-box {
+            margin-bottom: 15px;
+        }
+        .year {
+            font-weight: bold;
+            color: #444;
+            font-size: 14px;
+        }
+        .degree {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .univ {
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .gpa {
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* Keahlian */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill-item {
+            width: 100%;
+        }
+
+        .skill-item h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .skill-item p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .skill-icon-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        
+        .skill-icon-group i {
+            font-size: 20px;
+            color: #444;
+        }
+
+        /* Pengalaman */
+        .experience-item {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 2px solid #ddd;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .company {
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .exp-year {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .job-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .job-desc li {
+            margin-left: 15px;
+            margin-bottom: 3px;
+        }
+
+        /* Responsive untuk Mobile */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-side, .right-side {
+                width: 100%;
+            }
+            .left-side {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+        <!-- Kolom Kiri (Sidebar) -->
+        <aside class="left-side">
+            <!-- Foto Profil -->
+            <div class="profile-img">
+            <img src="assets/PasFoto.png" alt="Foto Profil" class="profile-photo">
+        </div>
+
+        <!-- Kontak -->
+        <div class="section-title-left">KONTAK</div>
+
+        <div class="contact-item">
+            <a href="mailto:adnan.applet@gmail.com">
+                <i class="fas fa-envelope"></i>
+                <span>adnan.applet@gmail.com</span>
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <a href="https://wa.me/6282242087663" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+                <span>0822-4208-7663</span>
+            </a>
+        </div>
+        <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://linkedin.com/in/adenan-muhtadin-b5958aab" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/adenan-muhtadin
+            </a>
+        </div>
+        <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/syauqiproject" target="_blank" rel="noopener noreferrer">
+                github.com/syauqi
+            </a>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Jakarta, Indonesia</span>
+        </div>
+    </aside>
+
+    <!-- Kolom Kanan (Konten) -->
+    <main class="right-side">
+        
+        <header>
+            <h1>Adenan Muhtadin</h1>
+            <div class="subtitle">(Panggil saya Adnan)</div>
+            <div class="about-me">
+                Profesional IT Support yang berdedikasi dan berorientasi pada detail dengan pengalaman lebih dari 5 tahun dalam penanganan teknis. Terampil dalam troubleshooting perangkat keras & lunak serta memastikan kelancaran operasional bisnis.
+            </div>
+        </header>
+
+        <!-- Pendidikan -->
+        <section>
+            <div class="section-title">Pendidikan</div>
+            <div class="education-box">
+                <div class="year">2008 — 2014</div>
+                <div class="degree">S1 Teknik Informatika</div>
+                <div class="univ">Universitas Semarang (USM)</div>
+                <div class="gpa">IPK: 2.91</div>
+            </div>
+        </section>
+
+        <!-- Keahlian -->
+        <section>
+            <div class="section-title">Keahlian</div>
+            <div class="skills-container">
+                
+                <div class="skill-item">
+                    <h4>IT Support & Troubleshooting</h4>
+                    <p>Perbaikan hardware PC/Laptop, instalasi OS (Windows, Linux), penanganan masalah software.</p>
+                    <div class="skill-icon-group">
+                        <i class="fas fa-laptop"></i>
+                        <i class="fas fa-tools"></i>
+                        <i class="fab fa-windows"></i>
+                        <i class="fab fa-linux"></i>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <h4>Jaringan & Infrastruktur</h4>
+                    <p>Konfigurasi Router & Switch, maintenance LAN/WAN, crimping kabel jaringan.</p>
+                    <div class="skill-icon-group">
+                        <i class="fas fa-network-wired"></i>
+                        <i class="fas fa-server"></i>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <h4>Aplikasi & Bahasa Pemrograman</h4>
+                    <p>Microsoft Office, IT Ticketing System, HTML, Basic PHP, Basic Javascript.</p>
+                    <div class="skill-icon-group">
+                        <i class="fas fa-file-word"></i>
+                         <i class="fas fa-file-excel"></i>
+                        <i class="fas fa-ticket-alt"></i>
+                        <i class="fab fa-php"></i>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-js"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Pengalaman -->
+        <section>
+            <div class="section-title">Pengalaman</div>
+            
+            <div class="experience-item">
+                <div class="job-title">Dockument Export Staff</div>
+                <div class="company">PT Jasco Logistic Semarang</div>
+                <div class="exp-year">2008 — Maret 2026</div>
+                <ul class="job-desc">
+                    <li>Pembuatan Dockument PEB (Persetujuan Ekspor Barang).</li>
+                    <li>Pembuatan Dockument Sucofindo.</li>
+                    <li>Pembuatan Dokument Phytosanitary.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">IT Support</div>
+                <div class="company">PT Visionet Data Internasional</div>
+                <div class="exp-year">2013 — Sekarang</div>
+                <ul class="job-desc">
+                    <li>Project EDC Maintenance setiap bulan Mesin EDC Bank Mandiri, Cimb Niaga, BRI, BNI, MEGA </li>
+                    <li>Project DSN Relokasi Pembukaan Cabang Mandiri Mikro Laju tahun November 2014</li>
+                    <li>Project DSN IT Support Bank DBS Indonesia Semarang tahun 2015 - 2016 </li>
+                    <li>Project DSN IT Support 1P Bank Cimb Niaga Maret 2015</li>
+                    <li>Project DSN IT Support Macdonal’s Indonesia 2017-2018</li>
+                    <li>Project DSN IT Support instalasi CCTV ATM CIMB Niaga 2017-2018</li>
+                    <li>Project DSN IT Support Roll Out, Inventory BSI, BTN 2021 </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>
